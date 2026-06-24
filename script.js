@@ -9,7 +9,7 @@ addButton.addEventListener("click", addTodo);
 function addTodo() {
   const todoText = todoInput.value;
 
-  if (todoText === "") {
+  if (todoText.trim() === "") {
     alert("할 일을 입력해주세요!");
     return;
   }
