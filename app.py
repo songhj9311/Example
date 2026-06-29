@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # todos.json 파일에서 데이터 읽기
 def load_todos():
@@ -37,4 +39,5 @@ def delete_todo(todo_id):
     return jsonify({"result": "deleted"})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    prot = int(*os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", debug=True, port=5000)
