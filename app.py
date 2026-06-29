@@ -5,6 +5,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+app.config['JSON_AS_ASCII'] = False
 
 # todos.json 파일에서 데이터 읽기
 def load_todos():
