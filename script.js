@@ -2,7 +2,7 @@ const todoInput = document.getElementById("todoInput");
 const addButton = document.getElementById("addButton");
 const todoList = document.getElementById("todoList");
 
-const SERVER_URL = "http://localhost:5000/todos";
+const SERVER_URL = "https://example-fwqw.onrender.com/todos";  // 서버 주소
 
 // 페이지를 처음 열었을 때, 서버에서 저장된 할 일들을 가져와서 화면에 그리기
 window.addEventListener("DOMContentLoaded", loadTodos);
